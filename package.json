@@ -1,8 +1,8 @@
 {
-  "name": "license-checker",
+  "name": "@metamask/license-checker",
   "description": "Check license info for a package",
   "author": "Dav Glass <davglass@gmail.com>",
-  "version": "25.0.1",
+  "version": "26.0.1",
   "contributors": [
     "Adam Weber <adamweber01@gmail.com>",
     "Andrew Couch <andy@couchand.com>",
@@ -57,6 +57,7 @@
     "zodiac403 <zodiac403@gmx.de>"
   ],
   "dependencies": {
+    "@metamask/spdx-satisfies": "^6.0.0",
     "chalk": "^2.4.1",
     "debug": "^4.3.4",
     "mkdirp": "^3.0.1",
@@ -65,7 +66,6 @@
     "semver": "^7.5.0",
     "spdx-correct": "^3.2.0",
     "spdx-expression-parse": "^3.0.1",
-    "spdx-satisfies": "^5.0.1",
     "treeify": "^1.1.0"
   },
   "devDependencies": {
@@ -75,7 +75,7 @@
     "git-contributors": "^0.2.3",
     "github-changes": "^2.0.3",
     "istanbul": "^0.4.3",
-    "jenkins-mocha": "^6.0.0",
+    "jenkins-mocha": "^10.0.0",
     "locale": "^0.1.0",
     "queue": "^4.4.2",
     "rimraf": "^2.6.2"
@@ -87,6 +87,14 @@
     "oss"
   ],
   "main": "./lib/index.js",
+  "files": [
+    "bin/",
+    "lib/",
+    "scripts/",
+    "CHANGELOG.md",
+    "NOTICE",
+    "customFormatExample.json"
+  ],
   "bin": {
     "license-checker": "./bin/license-checker"
   },
@@ -99,12 +107,16 @@
   },
   "preferGlobal": true,
   "bugs": {
-    "url": "http://github.com/davglass/license-checker/issues"
+    "url": "https://github.com/MetaMask/license-checker/issues"
   },
   "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
-    "url": "http://github.com/davglass/license-checker.git"
+    "url": "https://github.com/MetaMask/license-checker.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "engines": {
     "node": "^12.13.0 || >=14.15.0"
